@@ -31,12 +31,12 @@ void bubble_sort(int *array, size_t size)
 	}
 }
 /**
- * swap - swaps rwo integers
+ * swap_ints - swaps two integers
  *
- * @a: first int
- * @b: second int
+ * @a: first int pointer
+ * @b: second int pointer
  */
-void swap(int *a, int *b)
+void swap_ints(int *a, int *b)
 {
 	int tmp = *a;
 	*a = *b;
