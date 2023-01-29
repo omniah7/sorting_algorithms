@@ -9,6 +9,8 @@
  */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size == 0)
+		return;
 	quick_sort_helper(array, 0, size - 1, size);
 }
 /**
@@ -38,6 +40,7 @@ void quick_sort_helper(int *array, size_t low, size_t high, size_t size)
  * @high: last index at the array
  * @low: first index at the array
  * @size: Number of elements in @array
+ * Return: the pivot new index
  */
 size_t partion(int *array, size_t low, size_t high, size_t size)
 {
@@ -56,7 +59,7 @@ size_t partion(int *array, size_t low, size_t high, size_t size)
 			minIndx++;
 		}
 	}
-	if (high != minIndx)
+	if (pivot != array[minIndx])
 	{
 		swap_ints(array + high, array + minIndx);
 		print_array(array, size);
