@@ -31,7 +31,7 @@ void quick_sort_helper(int *array, size_t low, size_t high, size_t size)
 	pivot = partion(array, low, high, size);
 	if (pivot != 0)
 		quick_sort_helper(array, low, pivot - 1, size);
-	quick_sort_helper(array, pivot + 1, size - 1, size);
+	quick_sort_helper(array, pivot + 1, high, size);
 }
 /**
  * partion - Lomuto partition scheme
